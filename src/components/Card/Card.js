@@ -1,15 +1,13 @@
 import React from "react";
 import "./Card.css";
+import "../../cards.json";
 
 const Card = props => (
-  <div
-    className="card"
-    style={{
-      backgroundImage: props.image ? `url(${props.image})` : "none"
-    }}
-  >
-    {!props.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
-  </div>
+  <span className="clicked" onClick={() => props.handleBtnClick(props.data.id)}>
+      <div className="card">
+        <img alt="frog" src={props.data.image}/>
+      </div>
+  </span>
 );
 
 export default Card;

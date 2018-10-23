@@ -1,4 +1,12 @@
-nav.navbar.navbar-default {
-  background-color: green;
-  margin-bottom: 0;
+nav {
+  background-color: lightskyblue;
+  margin-bottom: 20px;
+  border-bottom: 5px solid black;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
 }
