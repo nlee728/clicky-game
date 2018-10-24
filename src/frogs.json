@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "image": "https://cdn.britannica.com/55/92755-050-0EE61378.jpg",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "image": "https://cdn.britannica.com/73/100273-050-221A0593.jpg",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "image": "https://cdn.britannica.com/95/5895-004-81547EBE.jpg",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "image": "https://cdn.britannica.com/64/43764-050-6977CA6C.jpg",
+    "clicked": false
+  },
+  {
+  "id": 5,
+  "image": "https://cdn.britannica.com/48/76048-050-70E8FE9E.jpg",
+  "clicked": false
+  },
+  {
+  "id": 6,
+  "image": "https://cdn.britannica.com/71/146371-050-75630FD3.jpg",
+  "clicked": false
+  },
+  {
+  "id": 7,
+  "image": "https://cdn.britannica.com/12/125612-004-B14A03AB.jpg",
+  "clicked": false
+  },
+  {
+  "id": 8,
+  "image": "https://cdn.britannica.com/26/12926-050-C041283A.jpg",
+  "clicked": false
+  },
+  {
+  "id": 9,
+  "image": "https://cdn.britannica.com/98/92698-050-25638EAC.jpg",
+  "clicked": false
+  },
+  {
+  "id": 10,
+  "image": "https://cdn.britannica.com/31/92731-050-1104084B.jpg",
+  "clicked": false
+  },
+  {
+  "id": 11,
+  "image": "https://cdn.britannica.com/35/151935-050-15049C94.jpg",
+  "clicked": false
+  },
+  {
+  "id": 12,
+  "image": "https://cdn.britannica.com/20/8720-004-75E0E8E2.jpg",
+  "clicked": false
+  }
+]
