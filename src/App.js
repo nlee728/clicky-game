@@ -16,15 +16,14 @@ import "./App.css";
   
     // When the component mounts, load the cards to be displayed
     componentDidMount() {
-      console.log("Component mounted");
       this.randomizeCards();
     }
   
      // handleIncrement increases this.state.count by 1
-  handleIncrement = () => {
-    // We always use the setState method to update a component's state
-    this.setState({ score: this.state.score + 1 });
-  };
+    handleIncrement = () => {
+      // We always use the setState method to update a component's state
+      this.setState({ score: this.state.score + 1 });
+    };
 
     randomizeCards = () => {
       const currentCards = this.state.frogs.slice();
@@ -47,9 +46,9 @@ import "./App.css";
   
     // Return score to zero and all cards to a "clicked" value of false.
     resetGame = () => {
-      const resetCards = this.state.frogs.map(cards => {
-        cards.clicked = false;
-        return cards;
+      const resetCards = this.state.frogs.map(frogs => {
+        frogs.clicked = false;
+        return frogs;
       });
       this.setState({
         score: 0,
@@ -67,6 +66,7 @@ import "./App.css";
           if (chosen.clicked === false) {
             // Alert user and shuffle cards
             this.setState({ alert: "Nice job!" });
+            chosen.clicked = true;
             //Increment score by 1
             this.handleIncrement();
             return chosen;
@@ -75,7 +75,7 @@ import "./App.css";
           // If the card has already been clicked...
           (chosen.clicked === true) {
             // Alert user the card has already been clicked, reset the game
-            this.setState({ alert: "Oops, you already clicked that one! Croooaak" });
+            this.setState({ alert: "Croooaak, you already clicked that one! " });
             this.resetGame();
             return chosen;
           };
@@ -91,7 +91,6 @@ import "./App.css";
             this.resetGame();
             return chosen;
           } 
-          chosen.clicked = true;
         }
         return chosen;
       })
