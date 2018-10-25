@@ -8,7 +8,7 @@ const Navbar = props => (
     <div className="navbar-brand" to="/">
       Clicky Game
     </div>
-    <div>
+    <div className="score">
       Score:  {props.score}  |    High Score: {props.highScore}   |   {props.alert}
     </div>
   </nav>

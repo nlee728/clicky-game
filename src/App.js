@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import FrogCard from "./components/FrogCard";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import frogs from "./frogs.json";
 import "./App.css";
+import Jumbotron from "./components/Jumbotron";
 
   class App extends Component {
     state = {
@@ -105,6 +107,7 @@ import "./App.css";
         highScore={this.state.highScore}
         alert={this.state.alert}
         />
+        <Jumbotron />
         {this.state.frogs.map(frog => (
           <FrogCard
             handleBtnClick={this.handleBtnClick}
@@ -113,6 +116,7 @@ import "./App.css";
             image={frog.image}
           />
         ))}
+        <Footer />
       </Wrapper>
     );
   }

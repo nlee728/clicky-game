@@ -3,7 +3,6 @@ import "./Footer.css";
 
 const Footer = () => (
   <footer className="footer">
-    <span>Clicky Game</span>
   </footer>
 );
 
