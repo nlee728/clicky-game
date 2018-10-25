@@ -71,11 +71,10 @@ import "./App.css";
             this.handleIncrement();
 
             //Check highscore against current score and update
-          if (newState.score >= newState.highScore) {
+          if (newState.score > newState.highScore) {
             this.setState({ highScore: newState.score });
           }
 
-          
           //If the correct answer is the final guess, the user wins. Reset game
           if ((newState.score + 1) === newState.frogs.length) {
             this.setState({ alert: "You win! Ribbit Ribbit!" });
@@ -88,24 +87,15 @@ import "./App.css";
             // Alert user the card has already been clicked, reset the game
             this.setState({ alert: "Croooaak, you already clicked that one! " });
             this.resetGame();
-            return chosen;
           };
-
-   
         }
         return chosen;
       })
+
       //Update the chosen card and shuffle the cards
       this.setState({ frogs: chosenCard });
       this.randomizeCards();
     }
-
-  // handleBtnClick = id => {
-  //   // Filter this.state.frogs for frogs with an id not equal to the id being removed
-  //   const frogs = this.state.frogs.filter(frog => frog.id !== id);
-  //   // Set this.state.frogs equal to the new frogs array
-  //   this.setState({ frogs });
-  // };
 
   // Map over this.state.frogs and render a frogCard component for each frog object
   render() {
