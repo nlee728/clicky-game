@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import FrogCard from "./components/FrogCard";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
-// import Title from "./components/Title";
 import frogs from "./frogs.json";
 import "./App.css";
 
@@ -72,7 +71,7 @@ import "./App.css";
 
             //Check highscore against current score and update
           if (newState.score > newState.highScore) {
-            this.setState({ highScore: newState.score });
+            this.setState({ highScore: newState.score + 1 });
           }
 
           //If the correct answer is the final guess, the user wins. Reset game
@@ -80,7 +79,7 @@ import "./App.css";
             this.setState({ alert: "You win! Ribbit Ribbit!" });
             this.resetGame();
           }
-          
+
          } else if
           // If the card has already been clicked...
           (chosen.clicked === true) {
