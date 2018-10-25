@@ -69,7 +69,18 @@ import "./App.css";
             chosen.clicked = true;
             //Increment score by 1
             this.handleIncrement();
-            return chosen;
+
+            //Check highscore against current score and update
+          if (newState.score >= newState.highScore) {
+            this.setState({ highScore: newState.score });
+          }
+
+          
+          //If the correct answer is the final guess, the user wins. Reset game
+          if ((newState.score + 1) === newState.frogs.length) {
+            this.setState({ alert: "You win! Ribbit Ribbit!" });
+            this.resetGame();
+          }
           
          } else if
           // If the card has already been clicked...
@@ -79,18 +90,8 @@ import "./App.css";
             this.resetGame();
             return chosen;
           };
-          
-          //Check highscore against current score and update
-          if (newState.score >= newState.highScore) {
-            this.setState({ highScore: newState.score });
-          }
-  
-          //If the correct answer is the final guess, the user wins. Reset game
-          if ((newState.score + 1) === newState.frogs.length) {
-            this.setState({ alert: "You win! Ribbit Ribbit!" });
-            this.resetGame();
-            return chosen;
-          } 
+
+   
         }
         return chosen;
       })
